@@ -1,0 +1,9 @@
+<%= form_with(url:'/signin', method: "post") do %>
+<%= label_tag(:user, "Your name: ") %>
+<%= collection_select(:user, :user_id, User.all, :id, :name, {:prompt => 'Please select your username from this dropdown'}) %><br><br>
+
+<%= label_tag(:password, "Your password:") %><br>
+<%= password_field(:user, :password, class:"form-control") %><br>
+
+<%= submit_tag("Sign In") %>
+<% end %>

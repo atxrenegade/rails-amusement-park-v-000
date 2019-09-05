@@ -1,0 +1,14 @@
+<h1> New Attraction </h1>
+<%= form_with(url: '/attraction/new', method: "get") do %><br>
+	<%= label_tag(:name, "Name") %><br>
+	<%= text_field_tag(:name) %><br><br>
+	<%= label_tag(:height_requirement, "Height Requirement (in inches)") %><br>
+	<%= text_field_tag(:height_requirement) %><br><br>
+	<%= label_tag(:happiness_rating, "How happy are you? (1-5 scale)") %><br>
+	<%= text_field_tag(:happiness_rating) %><br><br>
+	<%= label_tag(:nausea_rating, "How nauseous are you? (1-5 scale)") %><br>
+	<%= text_field_tag(:nausea_rating) %><br><br>
+	<%= label_tag(:tickets, "How many dollars are in your pocket?") %><br>
+	<%= text_field_tag(:tickets) %><br><br>
+	<%= submit_tag("Create Attraction") %>
+<% end %>
